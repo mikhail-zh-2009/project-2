@@ -13,34 +13,16 @@
 		<link rel="stylesheet" href="style.css">
 
 		<script type="text/javascript">
-			// To hide or show comment block
-			function hideOrShowComments() {
-				// To hide when not visible
-				if($('#comments').is(":visible")) {
-					$('#comments').slideUp(300, function() {
-						// Change text to show
-						$('#hide-and-show-comments-button').html('Show comments')
-					})
-					
-				}
-				// To show when visible
-				else {
-					$('#comments').slideDown(300, function() {
-						// Change text to hide
-						$('#hide-and-show-comments-button').html('Hide comments')
-					})
-				}
-			}
-
-			$(document).ready(function() {
-				$('#hide-and-show-comments-button').bind('click', hideOrShowComments)
-			})
+			$.get("script.js");
 		</script>
 	</head>
-	
+
 	<body>
 		<!-- To hide comments block -->
-		<button id="hide-and-show-comments-button" class="btn btn-primary">Hide comments</button>
+		<button id="hide-comments-button" class="btn btn-primary">Hide comments</button>
+
+		<!-- To show comments block -->
+		<button id="show-comments-button" style="display:none" class="btn btn-primary">Show comments</button>
 
 		<!-- Test block with some comments -->
 		<div id="comments">
