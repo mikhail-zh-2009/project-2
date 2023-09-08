@@ -8,10 +8,15 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div id="test" onclick="$('#test').hide()">Click to hide!</div>
+		<div>
+			Blahblah
+		</div>
+		<div id="Blahblah">
+			Blahblah
+		</div>
 		<script type="text/javascript">
-			var get_by_id_test = $('#test').html()
-			alert(get_by_id_test)
+			var test = $("div[id='Blahblah']")
+			alert(test.length)
 		</script>
 	</body>
 </html>
