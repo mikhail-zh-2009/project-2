@@ -13,12 +13,30 @@
 		<link rel="stylesheet" href="style.css">
 
 		<script type="text/javascript">
-			
+			function hideComments() {
+				$('#comments').hide()
+			}
+
+			function showComments() {
+				$('#comments').show()
+			}
+
+			$(document).ready(function() {
+				$('#hide-comments-button').bind('click', hideComments)
+				$('#show-comments-button').bind('click', showComments)
+			})
 		</script>
 	</head>
 	<body>
 		
-		
+		<button id="hide-comments-button" class="btn btn-primary">Hide comments</button>
+		<button id="show-comments-button" class="btn btn-primary">Show comments</button>
+
+		<div id="comments">
+			<p>comment number 1</p>
+			<p>comment number 2</p>
+			<p>comment number 3</p>
+		</div>
 
 	</body>
 </html>
