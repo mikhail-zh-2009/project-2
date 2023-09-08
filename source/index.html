@@ -16,8 +16,9 @@
 			function validate_gender_field() {
 				var state = $('input[name="gender"]:checked').val()
 				if(!state) {
-					return $('#message').html('<br><span class="text-danger">Select one of variants</span>')
+					return $('#wrong-form-data-message').show()
 				}
+				alert(state)
 			}
 		</script>
 	</head>
@@ -32,8 +33,12 @@
 			<br>
 			<label for="gender-field-another">Another</label>
 			<input type="radio" name="gender" id="gender-field-another" value="another">
-			<span id="message"></span>
-			<br>
+			<span id="message-block">
+				<span id="wrong-form-data-message" style="display:none">
+					<br><span class="text-danger">Select one of variants</span>
+				</span>
+				<br>
+			</span>
 			<input type="button" id="done" onclick="return validate_gender_field()" value="Done">
 		</form>
 
