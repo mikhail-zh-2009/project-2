@@ -13,24 +13,25 @@
 		<link rel="stylesheet" href="style.css">
 
 		<script type="text/javascript">
-			function hideComments() {
-				$('#comments').hide()
-			}
-
-			function showComments() {
-				$('#comments').show()
+			function hideOrShowComments() {
+				if($('#comments').is(":visible")) {
+					$('#comments').hide()
+					$('#hide-and-show-comments-button').html('Show comments')
+				}
+				else {
+					$('#comments').show()
+					$('#hide-and-show-comments-button').html('Hide comments')
+				}
 			}
 
 			$(document).ready(function() {
-				$('#hide-comments-button').bind('click', hideComments)
-				$('#show-comments-button').bind('click', showComments)
+				$('#hide-and-show-comments-button').bind('click', hideOrShowComments)
 			})
 		</script>
 	</head>
 	<body>
 		
-		<button id="hide-comments-button" class="btn btn-primary">Hide comments</button>
-		<button id="show-comments-button" class="btn btn-primary">Show comments</button>
+		<button id="hide-and-show-comments-button" class="btn btn-primary">Hide comments</button>
 
 		<div id="comments">
 			<p>comment number 1</p>
